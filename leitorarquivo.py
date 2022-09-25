@@ -5,4 +5,4 @@ class LeitorArquivo:
    
     def getValores(self):
         return self.valores
-        #jhjdhjh
+    
