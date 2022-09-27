@@ -5,13 +5,15 @@ import matplotlib.pyplot as plt
 def main():
     leitor = LeitorArquivo('data.txt')
     valores = leitor.getValores() 
-    for serie in valores:
-       plt.plot(serie)
     print(valores)
-    plt.plot(valores)
     plt.title('Gráfico de linhas')
     plt.ylabel('Valores de entrada')
     plt.xlabel('Amostragem')
+    i = 1
+    for serie in valores:
+        plt.plot(serie, label='Série ' + str(i))   
+        i += 1
+    plt.legend(loc='upper left')
     plt.show()
     
  
